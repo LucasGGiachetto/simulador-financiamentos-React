@@ -1,50 +1,69 @@
-# Welcome to your Expo app 👋
+# 📊 Simulador de Financiamento - React Native
+## Um componente React Native para cálculo de financiamentos com juros compostos, desenvolvido em TypeScript com Styled Components.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+### Pré-requisitos
+Node.js (versão 16 ou superior)
 
-## Get started
+npm ou yarn
 
-1. Install dependencies
+Expo CLI (opcional para desenvolvimento móvel)
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### ⚙️ Instalação
+Instale o Expo CLI globalmente (recomendado):
 
 ```bash
-npm run reset-project
+npm install -g expo-cli
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Crie um novo projeto React Native:
 
-## Learn more
+```bash
+npx create-expo-app@latest NomeDoSeuProjeto
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### Navegue até a pasta do projeto:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+cd NomeDoSeuProjeto
+```
 
-## Join the community
+### Instale as dependências adicionais:
 
-Join our community of developers creating universal apps.
+```bash
+npm install styled-components
+npm install --save-dev @types/styled-components @types/react-native
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+ ### Executando o Projeto
+Inicie o servidor de desenvolvimento:
+
+bash
+npm start
+Escaneie o QR code com o app Expo Go (disponível na App Store e Google Play)
+
+
+### 🧮 Fórmulas Utilizadas
+Valor da Parcela (PMT):
+
+```text
+PMT = PV × [i(1+i)^n] / [(1+i)^n-1]
+```
+
+Onde:
+
+PV = Valor financiado
+
+i = Taxa de juros mensal
+
+n = Número de parcelas
+
+Valor Total:
+
+```text
+Total = (PMT × n) + Taxas Adicionais
+```
+
+### 📱 Plataformas Suportadas:
+- iOS
+- Android
+- Web (via React Native Web)
