@@ -6,7 +6,7 @@ Node.js (versão 16 ou superior)
 
 npm ou yarn
 
-Expo CLI (opcional para desenvolvimento móvel)
+Expo CLI
 
 ### ⚙️ Instalação
 Instale o Expo CLI globalmente (recomendado):
